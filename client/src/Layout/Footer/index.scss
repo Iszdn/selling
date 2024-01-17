@@ -1,0 +1,35 @@
+#footer{
+    color: var(--second--color);
+    line-height: 1.5;
+    padding: 128px 0;
+    h4{
+        font-size: 16px;
+        font-weight: 900;
+        color: black;
+       margin-bottom: 24px;
+    } 
+    ul{
+            li{
+margin-bottom: 10px;
+            }
+        }
+        .sosials{
+display: flex;
+gap: 20px;
+        }
+        .shoe{
+            color: black;
+            p{
+                font-weight: 700;
+            }
+            .button{
+                background-color: black;
+                border: 2px solid black;
+                display: inline-block;
+                padding: 8px 20px;
+                color: white;
+                font-size: 16px;
+             
+            }
+        }
+}

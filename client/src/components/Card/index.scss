@@ -1,0 +1,68 @@
+.card-pro{
+//   .image{
+//     img{
+//     }
+//   }  
+    .content{
+        text-align: center;
+        color: var(--second--color);
+        padding: 0 24px;
+        h3{
+            margin-top: 20px;
+color: black;
+font-size: 18px;
+        }
+        .raiting{
+            margin-bottom: 20px;
+            justify-content: center;
+            display: flex;
+            gap: 20px;
+            span{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                .sari{
+                    color: #F89D13;
+                }
+            }
+        }
+        .btnss{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            .btn1{
+border: 2px solid white;
+cursor: pointer;
+padding: 10px 40px;
+display: flex;
+    transition: .3s;
+    align-items: center;
+justify-content: center;
+&:hover{
+    transition: .3s;
+    background-color: white; 
+    color: black;
+}
+            }
+            .btn2{
+border: 2px solid white;
+cursor: pointer;
+padding: 10px 40px;
+display: flex;
+align-items: center;
+justify-content: center; 
+    transition: .3s;
+    background-color: white;
+    color: black;
+&:hover{
+    background-color: transparent; 
+    transition: .3s;
+    color: white;
+}
+            }
+        }
+    }
+}

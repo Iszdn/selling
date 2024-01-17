@@ -1,0 +1,28 @@
+.cardleader{
+    text-align: center;
+    color: var(--second--color);
+    h3{
+margin-top: 16px;
+    }
+    h4{
+        color: #ccc;
+        font-size: 12px;
+    }
+    p{
+        text-align: center;
+    }
+    .sosial{
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        span{
+            border-radius: 50%;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--second--color);
+            color: white;
+        }
+    }
+}

@@ -1,0 +1,59 @@
+#header{
+    background-image: url("https://preview.colorlib.com/theme/selling/images/hero_2.jpg.webp");
+    background-attachment:fixed;
+    background-size: cover;
+    padding: 200px 0;
+    height: 100%;
+    color: white;
+    .content{
+        h1{
+            
+            font-size: 80px;
+            font-weight: 900;
+        }
+        P{
+max-width: 600px;
+font-size: 20px;
+padding: 20px 0 48px;
+        }
+        .buttons{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            .btn1{
+border: 2px solid white;
+cursor: pointer;
+padding: 10px 40px;
+display: flex;
+    transition: .3s;
+    align-items: center;
+justify-content: center;
+&:hover{
+    transition: .3s;
+    background-color: white; 
+    color: black;
+}
+            }
+            .btn2{
+border: 2px solid white;
+cursor: pointer;
+padding: 10px 40px;
+display: flex;
+align-items: center;
+justify-content: center; 
+    transition: .3s;
+    background-color: white;
+    color: black;
+&:hover{
+    background-color: transparent; 
+    transition: .3s;
+    color: white;
+}
+            }
+        }
+    }
+    
+}
