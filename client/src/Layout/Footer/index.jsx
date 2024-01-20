@@ -4,6 +4,7 @@ import { FaFacebookF } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
+import { FaHeart } from "react-icons/fa6";
 const Footer = () => {
   return (
     <footer id='footer'>
@@ -36,6 +37,9 @@ const Footer = () => {
       </div>
     </div>
     
+  </div>
+  <div className="bottom-foot text-center ">
+    <p>Copyright ©2024 All rights reserved | This template is made with <FaHeart /> by Colorlib</p>
   </div>
 </div>
     </footer>

@@ -6,7 +6,7 @@ import * as Yup from 'yup';
 const FormAdd = ({ getData}) => {
 
   async function addData(values) {
-    const res=await axios("http://localhost:3000/",values)
+    const res=await axios.post("http://localhost:3000/",values)
     getData()
   }
 

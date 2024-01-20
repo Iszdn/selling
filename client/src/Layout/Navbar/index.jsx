@@ -1,12 +1,16 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { FaRegHeart } from "react-icons/fa6";
 import { AiOutlineShoppingCart } from "react-icons/ai";
-import Hamburger from 'hamburger-react'
+import { MdClose } from "react-icons/md";
 import "./index.scss"
+import { BasketContext } from '../../context/BasketContext';
+import { WishlistContext } from '../../context/WishlistContext';
 const Navbar = () => {
-  const [isOpen, setOpen] = useState(false)
-
+const [open, setOpen] = useState(false)
+  const {basket}=useContext(BasketContext)
+  const {wish}=useContext(WishlistContext)
+  console.log(open);
   return (
     <nav id='navbar'> <div className="container">
 <div className="navi">
@@ -32,23 +36,22 @@ const Navbar = () => {
           <NavLink to="/blog" activeClassName="active">Blog</NavLink>
         </li>
         <li>
-          <NavLink to="/wish" activeClassName="active"><span><FaRegHeart /></span></NavLink>
+          <NavLink to="/wish" activeClassName="active"><span><FaRegHeart /></span><span className='wish'>{wish.length}</span></NavLink>
         </li>
         <li>
-          <NavLink to="/basket" activeClassName="active"><span><AiOutlineShoppingCart /></span></NavLink>
+          <NavLink to="/basket" activeClassName="active"><span><AiOutlineShoppingCart /></span><span className='wish'>{basket.length}</span></NavLink>
         </li>
       </ul>
     </div>
-    <div className="bar">
-    <Hamburger toggled={isOpen} toggle={setOpen} />
+    <div className="bar" onClick={()=>setOpen(!open)}>
+      bar
     </div>
   
     
   </div>  
-  {
-isOpen &&
-      <div className="nav-media">
 
+      <div className={`${open ? "activex" : ""} nav-media `}>
+<button className='btn' onClick={()=>setOpen(!open)}><MdClose /></button>
     <ul>
         <li>
           <NavLink to="/" activeClassName="active">Home</NavLink>
@@ -73,7 +76,7 @@ isOpen &&
         </li>
       </ul>
     </div>
-    }
+    
 </div>
     </nav>
   )

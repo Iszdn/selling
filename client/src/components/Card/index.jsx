@@ -1,27 +1,34 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { FaStar } from "react-icons/fa6";
 import { FaRegHeart } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa";
 import "./index.scss"
-const Card = () => {
+import { BasketContext } from '../../context/BasketContext';
+import { WishlistContext } from '../../context/WishlistContext';
+import { Link } from 'react-router-dom';
+const Card = (product) => {
+  const {addBasket}=useContext(BasketContext)
+  const {addWish,wish}=useContext(WishlistContext)
   return (
     <div className='card-pro'>
 <div className="image">
-  <img src="https://preview.colorlib.com/theme/selling/images/model_1_bg.jpg" alt="" />
+  <img src={product.image} alt="" />
 </div>
 <div className="content">
-  <h3>Wild West Hoodie</h3>
+  <h3>{product.title}</h3>
   <div className="raiting">
     <span><FaStar className='sari' /> 5.0</span>
-    <span><FaRegHeart /> <FaHeart /></span>
+    <span onClick={()=>addWish(product)}> {
+      wish.some(x=>x._id===product._id) ? <FaHeart className='red-heart'/> :  < FaRegHeart className='red-heart'/>
+      }  </span>
   </div>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+  <p>{product.desc}</p>
 <div className="btnss">
-  <div className="btn1">
+  <div className="btn1" onClick={()=>addBasket(product)}>
     Cart
   </div>
   <div className="btn2">
-    View
+  <Link to={product._id}>view</Link>  
   </div>
 </div>
 </div>

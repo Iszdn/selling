@@ -1,98 +1,115 @@
-#navbar{
+#navbar {
+  padding: 20px 0;
+  background-color: white;
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+
+  .navi {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      h3 {
+        font-weight: 900;
+        font-size: 40px;
+        span {
+          color: var(--main--color);
+        }
+      }
+    }
+    .navigations {
+      ul {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        li {
+          .active {
+            color: var(--main--color);
+          }
+          a {
+            color: inherit;
+            transition: 0.2s;
+            position: relative;
+            span {
+              font-size: 20px;
+            }
+            .wish {
+              position: absolute;
+              top: -8px;
+              right: -11px;
+              background-color: red;
+              border-radius: 50%;
+              width: 20px;
+              display: flex;
+              justify-content: center;
+              color: white;
+              font-size: 12px;
+            }
+            &:hover {
+              transition: 0.2s;
+              color: var(--main--color);
+            }
+          }
+        }
+      }
+    }
+    .bar {
+      display: none;
+    }
+  }
+  .activex{
+    transform: translateX(300px);
+
+  }
+  .nav-media {
+    position: fixed;
+    transform: translateX(0px);
+    z-index: 22;
+    background-color: red;
+    width: 300px;
+    height: 100vh;
+    right: 0;
+    top: 0;
+    ul {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 20px;
+
+      li {
+        .active {
+          color: var(--main--color);
+        }
+        a {
+          color: inherit;
+          transition: 0.2s;
+          span {
+            font-size: 20px;
+          }
+          &:hover {
+            transition: 0.2s;
+            color: var(--main--color);
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 992px) {
+  #navbar {
     padding: 20px 0;
     background-color: white;
-    position: fixed;
-    z-index: 99;
+    // position: fixed;
     width: 100%;
-   
-    .navi{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        
-        .logo{
-            h3{
-                font-weight: 900;
-                font-size: 40px;
-                span{
-                    color: var(--main--color);
-                }
-            }
-        }
-        .navigations{
-            ul{
-                display: flex;
-                align-items: center;
-                gap: 20px;
-                li{
-                    .active{
-color: var(--main--color);
-                    }
-                    a{
-color: inherit;
-transition: .2s;
-span{
-    font-size: 20px;
-}
-&:hover{
-transition: .2s;
-color: var(--main--color);
-}
-                    }
-                }
-            }
-        }
-        .bar{
-            display: none;
-        }
-       
+    .navi {
+      .navigations {
+        display: none;
+      }
+      .bar {
+        display: block;
+      }
     }
-     .nav-media{
-            position: fixed;
-            z-index: 22;
-            background-color: white;
-            width: 100%;
-            ul{
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-                gap: 20px;
-               
-                li{
-                    .active{
-color: var(--main--color);
-                    }
-                    a{
-color: inherit;
-transition: .2s;
-span{
-    font-size: 20px;
-}
-&:hover{
-transition: .2s;
-color: var(--main--color);
-}
-                    }
-                }
-            }
-        }
-
-}
-@media screen and (max-width:992px) {
-    #navbar{
-        padding: 20px 0;
-        background-color: white;
-        // position: fixed;
-        width: 100%;
-        .navi{
-     
-            .navigations{
-               display: none;
-            }
-            .bar{
-                display: block;
-            }
-        }
-    
-    } 
+  }
 }

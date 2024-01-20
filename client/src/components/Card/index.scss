@@ -1,8 +1,8 @@
 .card-pro{
-//   .image{
-//     img{
-//     }
-//   }  
+margin-bottom: 30px; 
+.red-heart{
+    color: red;
+}
     .content{
         text-align: center;
         color: var(--second--color);
@@ -29,14 +29,17 @@ font-size: 18px;
         .btnss{
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
             gap: 8px;
             font-size: 13px;
             font-weight: 700;
             text-transform: uppercase;
             .btn1{
-border: 2px solid white;
+border: 2px solid black;
 cursor: pointer;
 padding: 10px 40px;
+background-color: black;
+color: white;
 display: flex;
     transition: .3s;
     align-items: center;
@@ -48,15 +51,20 @@ justify-content: center;
 }
             }
             .btn2{
-border: 2px solid white;
+border: 2px solid black;
 cursor: pointer;
 padding: 10px 40px;
 display: flex;
 align-items: center;
 justify-content: center; 
     transition: .3s;
-    background-color: white;
-    color: black;
+    a{
+        color: black;
+        font-size: 13px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    
 &:hover{
     background-color: transparent; 
     transition: .3s;
